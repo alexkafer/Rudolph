@@ -40,6 +40,9 @@ signals:
 public slots:
     void updateViewRow(int size);
      void updateViewColumn(int size);
+private slots:
+     void on_actionNew_Sequence_triggered();
+     void on_actionRepository_Settings_triggered();
 };
 
 #endif // MAINWINDOW_H

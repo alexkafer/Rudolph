@@ -24,51 +24,53 @@
      </rect>
     </property>
    </widget>
-   <widget class="QComboBox" name="rowSizeBox">
-    <property name="geometry">
-     <rect>
-      <x>80</x>
-      <y>10</y>
-      <width>65</width>
-      <height>22</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QWidget" name="horizontalLayoutWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>10</y>
-      <width>61</width>
-      <height>16</height>
+      <y>0</y>
+      <width>491</width>
+      <height>51</height>
      </rect>
     </property>
-    <property name="text">
-     <string>Row Size</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>150</x>
-      <y>10</y>
-      <width>91</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Column Size</string>
-    </property>
-   </widget>
-   <widget class="QComboBox" name="columnSizeBox">
-    <property name="geometry">
-     <rect>
-      <x>240</x>
-      <y>10</y>
-      <width>65</width>
-      <height>22</height>
-     </rect>
-    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetMaximumSize</enum>
+     </property>
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Row Size</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="rowSizeBox"/>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Column Size</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="columnSizeBox"/>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -84,7 +86,10 @@
     <property name="title">
      <string>File</string>
     </property>
-    <addaction name="actionOpen"/>
+    <addaction name="actionNew_Sequence"/>
+    <addaction name="separator"/>
+    <addaction name="actionOpen_From_Git"/>
+    <addaction name="actionOpen_From_Local"/>
    </widget>
    <widget class="QMenu" name="menuEdit">
     <property name="title">
@@ -97,31 +102,69 @@
     </property>
     <addaction name="separator"/>
    </widget>
-   <widget class="QMenu" name="menuSettings">
-    <property name="title">
-     <string>Settings</string>
-    </property>
-   </widget>
    <widget class="QMenu" name="menuAbout">
     <property name="title">
      <string>About</string>
     </property>
    </widget>
+   <widget class="QMenu" name="menuLight_Show_Tools">
+    <property name="title">
+     <string>Light Show Tools</string>
+    </property>
+    <addaction name="actionPull_Repository"/>
+    <addaction name="actionPush_Repository"/>
+    <addaction name="separator"/>
+    <addaction name="actionOpen_Repository"/>
+    <addaction name="actionRepository_Settings"/>
+   </widget>
    <addaction name="menuFile"/>
    <addaction name="menuEdit"/>
    <addaction name="menuView"/>
-   <addaction name="menuSettings"/>
    <addaction name="menuAbout"/>
+   <addaction name="menuLight_Show_Tools"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="action10">
+  <action name="actionSave_Version">
    <property name="text">
-    <string>10%</string>
+    <string>Save Version</string>
+   </property>
+   <property name="toolTip">
+    <string>Save and push to your branch</string>
    </property>
   </action>
-  <action name="actionOpen">
+  <action name="actionPull_Repository">
    <property name="text">
-    <string>Open</string>
+    <string>Pull Changes</string>
+   </property>
+  </action>
+  <action name="actionPush_Repository">
+   <property name="text">
+    <string>Upload Changes</string>
+   </property>
+  </action>
+  <action name="actionOpen_Repository">
+   <property name="text">
+    <string>Open Repository</string>
+   </property>
+  </action>
+  <action name="actionOpen_From_Git">
+   <property name="text">
+    <string>Open From Git</string>
+   </property>
+  </action>
+  <action name="actionOpen_From_Local">
+   <property name="text">
+    <string>Open From Local</string>
+   </property>
+  </action>
+  <action name="actionNew_Sequence">
+   <property name="text">
+    <string>New Sequence</string>
+   </property>
+  </action>
+  <action name="actionRepository_Settings">
+   <property name="text">
+    <string>Repository Settings</string>
    </property>
   </action>
  </widget>

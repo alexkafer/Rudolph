@@ -168,7 +168,16 @@ void MainWindow::updateViewColumn(int size)
 
 }
 
+void MainWindow::on_actionNew_Sequence_triggered()
+{
+    // Creating a new sequence.
+    // TODO: Create the sequence file in the repository
+}
 
+void MainWindow::on_actionRepository_Settings_triggered()
+{
+    // Setup repository
+}
 
 
 

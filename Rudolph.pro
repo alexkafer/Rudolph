@@ -31,7 +31,7 @@ SOURCES += \
         ./src/cellrenderer.cpp \
         ./src/griddelegate.cpp \
         ./src/sequence.cpp \
-        ./src/project.cpp  \
+        ./src/project.cpp
 
 HEADERS += \
         ./include/mainwindow.h \
